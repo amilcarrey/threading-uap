@@ -1,10 +1,10 @@
 namespace ClaseHilos
 {
-    internal class Producto
-    {
-        public string Nombre { get; set; }
-        public decimal PrecioUnitarioDolares { get; set; }
-        public int CantidadEnStock { get; set; }
+   internal class Producto
+   {
+      public string Nombre { get; set; }
+      public decimal PrecioUnitarioDolares { get; set; }
+      public int CantidadEnStock { get; set; }
 
         public Producto(string nombre, decimal precioUnitario, int cantidadEnStock)
         {
@@ -16,7 +16,7 @@ namespace ClaseHilos
     internal class Solution
     {
 
-        static List<Producto> productos = new List<Producto>
+      static List<Producto> productos = new List<Producto>
         {
             new Producto("Camisa", 10, 50),
             new Producto("Pantalón", 8, 30),
@@ -81,12 +81,6 @@ namespace ClaseHilos
             Console.WriteLine("precios actualizados");
             informesBarrier.SignalAndWait();
         }
-
-        static void Timeout()
-        {
-            informesBarrier.SignalAndWait(10000);
-            throw new Exception("Alguna tarea no se ejecutó, terminando...");
-        }
         
         internal static void Execute ()
         {
@@ -94,9 +88,7 @@ namespace ClaseHilos
             var tarea2 = new Thread(new ThreadStart(Tarea2));
             var tarea3 = new Thread(new ThreadStart(Tarea3));
             var tarea4 = new Thread(new ThreadStart(Tarea4));
-            var timeout = new Thread(new ThreadStart(Timeout));
 
-            //timeout.Start();
             tarea3.Start();
             tarea4.Start();
             tarea2.Start();
