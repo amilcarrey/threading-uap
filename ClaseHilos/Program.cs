@@ -1,5 +1,6 @@
 ﻿using ClaseHilos;
 
+
 //1 - Uso basico de hilos con Threads
 //_1Basico.Excecute();
 
@@ -16,7 +17,6 @@
 //_5Mutex.Excecute();
 
 //6- Uso de lock
-_6lock.Excecute();
+//_6lock.Excecute();
 
-
-
+Solution.Excecute();
