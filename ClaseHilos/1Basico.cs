@@ -13,7 +13,7 @@
             Thread hilo = new Thread(new ThreadStart(HolaUAP));
             hilo.Name = "Hilo 1";
             hilo.Start();
-            hilo.Join();
+            //hilo.Join();
             Console.WriteLine("Hola desde el hilo principal");
             Console.ReadLine();
         }
