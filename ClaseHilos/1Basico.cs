@@ -5,7 +5,7 @@
         static void HolaUAP()
         {
             Thread.Sleep(2000);
-            Console.WriteLine("Hola desde" + Thread.CurrentThread.Name);
+            Console.WriteLine("Hola desde " + Thread.CurrentThread.Name);
         }
 
         internal static void Excecute()
